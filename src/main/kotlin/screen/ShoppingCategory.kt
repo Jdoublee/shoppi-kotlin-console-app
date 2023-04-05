@@ -16,11 +16,12 @@ class ShoppingCategory {
         }
 
         if (selectedCategory == "#") {
-            // TODO 1. 장바구니로 이동
+            val shoppingCart = ShoppingCart()
+            shoppingCart.showCartItems()
         } else {
             if (categories.contains(selectedCategory)) {
                 val shoppingProductList = ShoppingProductList()
-                shoppingProductList.showProduct(selectedCategory)
+                shoppingProductList.showProducts(selectedCategory)
             } else {
                 showErrorMessage(selectedCategory)
             }
